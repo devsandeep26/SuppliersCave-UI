@@ -1,0 +1,362 @@
+<html>
+
+<head>
+    <title>Suppliers Cave</title>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- fav icon link -->
+    <link rel="shortcut icon" href="images/favicon%20(1).ico">
+    <!-- animate css link -->
+    <link rel="stylesheet" href="css/animate/animate.css" type="text/css">
+    <!--- google font links -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <!-- css file link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css" type="text/css">
+
+
+
+</head>
+
+<body>
+
+    <body>
+
+        <header>
+
+            <nav class="navbar navbar-fixed-top">
+
+                <div class="container-fluid">
+
+                    <div class="supply-nav-wrapper">
+
+                        <div class="navbar-header">
+
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#supply-menu">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            <a class="navbar-brand" href="#home">
+                                <img src="img/supplierscave-logo.png" class="img-responsive" style="height:100px;width:auto;padding-bottom:60px;" alt="logo">
+                            </a>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="supply-menu">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a class="smooth-scroll" href="javascript:void(0)" onclick="openLoginModal();">login</a>
+                                </li>
+                                <li>
+                                    <a class="smooth-scroll" href="javascript:void(0)" onclick="openRegisterModal();">register</a>
+                                </li>
+                                <li><a class="smooth-scroll" href="#work">about us</a></li>
+                                <li><a class="smooth-scroll" href="#work">how it works</a></li>
+                                <li><a class="smooth-scroll" href="#work">contact us</a></li>
+                                <li><a class="smooth-scroll" href="#work">Faq</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </nav>
+
+        </header>
+
+        <section id="home">
+
+            <div id="home-cover" class="bg-parallax animated fadeIn">
+
+                <div id="home-content-box">
+
+                    <div id="home-content-box-inner" class="text-center">
+
+                        <div id="home-heading" class="animated zoomIn">
+                            <h3>Think differently,
+                                <br>Think supply chain</h3>
+                        </div>
+                        <div id="home-btn" class="animated zoomIn">
+                            <a class="btn btn-lg btn-general btn-white smooth-scroll" href="#work" role="button" title="find more">find more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <div class="modal fade login" id="loginModal">
+            <div class="modal-dialog login animated">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Login with</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="box">
+                            <div class="content">
+                                <div class="social">
+                                    
+                                    <a id="google_login" class="circle google" href="/auth/google_oauth2">
+                                        <i class="fa fa-google-plus fa-fw"></i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                                        <i class="fa fa-facebook fa-fw"></i>
+                                    </a>
+                                </div>
+                                <div class="division">
+                                    <div class="line l"></div>
+                                    <span>or</span>
+                                    <div class="line r"></div>
+                                </div>
+                                <div class="error"></div>
+                                <div class="form loginBox">
+                                    <form method="post" action="/login" accept-charset="UTF-8">
+                                        <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                        <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                        <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="content registerBox" style="display:none;">
+                                <div class="form">
+                                    <form method="post" html="{:multipart=>true}" data-remote="true" action="/register" accept-charset="UTF-8">
+                                        <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                        <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                        <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                                        <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="forgot login-footer">
+                            <span>Looking to
+                                <a href="javascript: showRegisterForm();">create an account</a>
+                                ?</span>
+                        </div>
+                        <div class="forgot register-footer" style="display:none">
+                            <span>Already have an account?</span>
+                            <a href="javascript: showLoginForm();">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="clients">
+
+            <div class="content-box">
+                <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                    <h3> Work </h3>
+                    <div class="content-title-underline"></div>
+                </div>
+
+                <div class="container-fluid">
+
+                    <div class="row wow animated bounceInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                            <div id="clients-list" class="owl-carousel owl-theme" style="position:absolute;">
+                                <div class="client" style="margin-top:30px;">
+                                    <div class="col-md-6">
+                                    <h1 class="text-center" style="color:#fff;font-size:1.2rem;">Class Inventory</h1>
+                                    <h3 class="text-center sz" style="color:#fff">Search for the
+                                        <br> Rental from over 500 Product Categories</h3>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <div class="input-group" style="margin-top:20px;">
+                                        <input type="text" class="form-control text-center"  >
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">search Here</button>
+                                        </span>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="client" style="margin-top:30px;">
+                                        <div class="col-md-6">
+                                        <h1 class="text-center" style="color:#fff;font-size:1.2rem;">Class Inventory</h1>
+                                        <h3 class="text-center sz" style="color:#fff">Search for the
+                                            <br> Rental from over 500 Product Categories</h3>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <div class="input-group" style="margin-top:20px;">
+                                            <input type="text" class="form-control text-center"  >
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">search Here</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="client" style="margin-top:30px;">
+                                            <div class="col-md-6">
+                                            <h1 class="text-center" style="color:#fff;font-size:1.2rem;">Class Inventory</h1>
+                                            <h3 class="text-center sz" style="color:#fff">Search for the
+                                                <br> Rental from over 500 Product Categories</h3>
+                                            </div>
+                                            <div class="col-md-6">
+                                                
+                                            <div class="input-group" style="margin-top:20px;">
+                                                <input type="text" class="form-control text-center"  >
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default" type="button">search Here</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- End Content Box -->
+        </section>
+        <section id="feautures" style="display:block;margin-top:150px;background-color:#F8F8F8">
+            <div class="content-box">
+                <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                    <h3> feautures </h3>
+                    <div class="content-title-underline"></div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+                                <img src="img/how-1.jpg" class="img-responsive circle" alt="" style="max-height:200px">
+                                <h4 class="text-center sz">Suppliers manage their stocks in realtime</h4>
+                            </div>
+                        
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+                            <img src="img/how-2.jpg" class="img-responsive circle" alt="" style="max-height:200px">
+                            <h4 class="text-center sz">Suppliers manage their stocks in realtime</h4>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+                            <img src="img/how-3.jpg" class="img-responsive circle" alt="" style="max-height:200px">
+                            <h4 class="text-center sz">Suppliers manage their stocks in realtime</h4>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+                            <img src="img/how-4.jpg" class="img-responsive circle" alt="" style="max-height:200px">
+                            <h4 class="text-center sz">Suppliers manage their stocks in realtime</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+        <section id="content">
+                <div class="content-box">
+                        <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                            <h3> Two Way Participation </h3>
+                            <div class="content-title-underline"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                    <h1 class="text-center sz" style="font-size:1.2rem">As a Buyer</h1>
+                             <h3 class="text-center sz">Procure 10% over and above the quantities required. <br>Such surplus material typically cost 1% of revenuw of profit.</h3>
+
+
+
+                            </div>
+                            <div class="col-md-6">
+                             
+                                    <h1 class="text-center" style="font-size:1.2rem">As a Buyer</h1>
+                                  <h3 class="text-center sz">Use the same model as buyer to Purchase order</h3>
+
+
+                                </div>
+                        </div>
+                       
+
+
+
+                        </div>
+
+
+        </section>
+       
+        <footer>
+                <div id="contact">
+                    <div class="container">
+                        <div class="row">
+                           
+                            <div class="col-lg-8 col-md-8 col-xs-8 col-sm-8">
+                                <div id="right-side">
+                                    <h3 class="text-center" style="font-size:1.2rem;">We are on our way to delivery a fully functional module.<br> 
+                                        Please subscribe for latest updates</h3>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xs-8">
+                                    <form action="#">
+                                        <input type="text" name="fullname" placeholder="fullname" class="form-control">
+                                        <input type="email" name="email" placeholder="email" class="form-control">
+        
+                                        <div id="send-btn">
+                                            <a class="btn btn-lg btn-general btn-white" href="#home" role="button">SEND</a>
+        
+                                        </div>
+                                    </div>
+                                    </form>
+        
+        
+                                </div>
+        
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+                              <img src="img/supplierscave-logo.png" class="img-responsive" style="height:80px;width:auto">
+                              <ul class="social-list">
+                                    <li><a href="#" class="social-icon icon-white"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#" class="social-icon icon-white"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" class="social-icon icon-white"><i class="fa fa-youtube-play"></i></a></li>
+                                    <li><a href="#" class="social-icon icon-white"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+        
+        
+        
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
+        
+                <a href="#home" id="back-to-top" class="btn btn-sm btn-blue btn-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+            </footer>
+
+
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl-carousel/owl.carousel.min.js"></script>
+        <script src="js/wow/wow.min.js"></script>
+        <script src="js/custom.js"></script>
+
+
+
+    </body>
+</body>
+
+</html>
